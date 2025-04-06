@@ -1,0 +1,36 @@
+conda create --name yolo11-env python=3.12 -y
+
+conda activate yolo11-env
+
+pip install ultralytics
+
+pip3 install torch torchvision torchaudio
+
+_____
+
+20/80% Verteilung 
+data/train/images
+data/train/labels
+data/validation/images
+data/validation/labels
+
+_____
+
+data.yaml:
+
+path:  /Users/benjaminbleske/Desktop/yolo/data 
+train: train/images
+val: validation/images
+
+nc: 2
+
+names: ["Rocky", "Scratchy"]
+
+______
+
+yolo detect train data=data.yaml model=yolo11s.pt epochs=60 imgsz=640
+
+
+nach dem Training
+____
+python yolo_detect.py --model=runs/detect/train/weights/best.pt --source=IMG_1221.mp4
