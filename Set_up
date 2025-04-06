@@ -34,3 +34,12 @@ yolo detect train data=data.yaml model=yolo11s.pt epochs=60 imgsz=640
 nach dem Training
 ____
 python yolo_detect.py --model=runs/detect/train/weights/best.pt --source=IMG_1221.mp4
+
+
+___
+labeling mit label studio
+
+pip install label-studio
+label-studio start
+
+Export datenmodell als yolo und mit images
