@@ -3,25 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>KI Object detecion</title>
+  <title>KI Object Detection</title>
   <style>
-
+    /* Grundlegender Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background: #f4f4f4;
+      color: #333;
+      padding: 20px;
+    }
+    
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #444;
+    }
+    
+    /* Video-Style */
+    video {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto 30px;
+      border: 5px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    /* Bildergalerie */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border: 3px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    /* Responsive Anpassungen */
+    @media (min-width: 768px) {
+      .gallery img {
+        max-width: 45%;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .gallery img {
+        max-width: 30%;
+      }
+    }
   </style>
 </head>
 <body>
   <h1>KI mit unseren Hauskatzen: Rocky oder Scratchy?</h1>
  
-<video width="640" height="480" controls>
-    <!-- Pfad zum Video, falls im Repository abgelegt -->
+  <video controls>
     <source src="Bildschirmaufnahme.mp4" type="video/mp4">
-  
+    Ihr Browser unterstützt dieses Videoformat nicht.
   </video>
   
-  <!-- Mehrere Bilder einbetten -->
   <h2>Bildergalerie</h2>
-  <img src="labeling.png" alt="Beschreibung von Bild 1" width="900">
-  <img src="training1.png" alt="Beschreibung von Bild 2" width="900">
-  <img src="training2.png" alt="Beschreibung von Bild 3" width="900">
-
+  <div class="gallery">
+    <img src="labeling.png" alt="Bild: Labeling">
+    <img src="training1.png" alt="Bild: Training 1">
+    <img src="training2.png" alt="Bild: Training 2">
+  </div>
+  
 </body>
 </html>
